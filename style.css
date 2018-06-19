@@ -1,0 +1,20 @@
+h1{
+color: #A60000;
+font-size: 32px;
+text-shadow: 1px 1px black;
+text-align: center;
+}
+#id1{
+position: absolute;
+width: 30px;
+}
+#id2{
+position: absolute;
+width: 30px;
+display: none;
+}
+#id3{
+position: absolute;
+width: 30px;
+display: none;
+}
