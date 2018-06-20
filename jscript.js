@@ -15,38 +15,57 @@
 			draw(0,0);
 			
 			function check1(){
-				if (a==parseInt(document.getElementById('id1').value)) {
-					document.getElementById('id1').style.color = "#000000";
-					document.getElementById('id1').style.display = "none"
-					document.getElementById('id2').style.display = "block"
-					draw(3,0);
+				var inputVal = Number(document.getElementById('id1').value);
+				
+				if( !isNaN(inputVal) ){	
+					if (inputVal == a) {
+						document.getElementById('id1').style.color = "#000000";
+						document.getElementById('id1').style.display = "none"
+						document.getElementById('id2').style.display = "block"
+						draw(3,0);
+					}
+					else{
+						document.getElementById('id1').style.color = "#ff0000";
+						draw(0,1);
+					}
+			    } else{
+					document.getElementById('id1').value = "";
 				}
-				else{
-					document.getElementById('id1').style.color = "#ff0000";
-					draw(0,1);
-				}
+				
 			}
 			function check2(){ 
-				if (b==parseInt(document.getElementById('id2').value)) {
-					document.getElementById('id2').style.color = "#000000";
-					document.getElementById('id2').style.display = "none"
-					document.getElementById('id3').style.display = "block"
-					draw(1,0);
-				}
-				else{
-					document.getElementById('id2').style.color = "#ff0000";
-					draw(3,2);
+				var inputVal = Number(document.getElementById('id2').value);
+				
+				if( !isNaN(inputVal) ){
+					if (inputVal == b) {
+						document.getElementById('id2').style.color = "#000000";
+						document.getElementById('id2').style.display = "none"
+						document.getElementById('id3').style.display = "block"
+						draw(1,0);
+					}
+					else{
+						document.getElementById('id2').style.color = "#ff0000";
+						draw(3,2);
+					}
+				} else{
+					document.getElementById('id2').value = "";
 				}
 			}
 		   
 			function check3(){
-				if (c==parseInt(document.getElementById('id3').value)) {
-					document.getElementById('id3').style.color = "#000000";
-					document.getElementById('id3').style.display = "none"
-					draw(1,0);
-				}
-				else{
-					document.getElementById('id3').style.color = "#ff0000";
+				var inputVal = Number(document.getElementById('id3').value);
+				
+				if( !isNaN(inputVal) ){
+					if (inputVal == c) {
+						document.getElementById('id3').style.color = "#000000";
+						document.getElementById('id3').style.display = "none"
+						draw(1,0);
+					}
+					else{
+						document.getElementById('id3').style.color = "#ff0000";
+					}
+				} else{
+					document.getElementById('id3').value = "";
 				}
 			}              
 
